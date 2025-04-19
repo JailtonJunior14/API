@@ -85,6 +85,7 @@ final class PrestadorDAO extends DAO
 
         $stmt  = parent::$conexao->prepare($sql);
         $stmt->bindValue(1, $id);
+        
         return $stmt->execute();
         
         

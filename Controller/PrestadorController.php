@@ -2,6 +2,7 @@
 
 namespace Api\Controller;
 
+
 use API\Model\Prestador;
 use Exception;
 use Prestador as GlobalPrestador;
@@ -25,10 +26,11 @@ final class PrestadorController
 
     public static function listar() : void
     {
-        echo "listar";
+        //echo "listar";
         $prestador = new Prestador();
         $lista = $prestador->getAllRows();
-        var_dump($lista);
+        //var_dump($lista);
+        echo json_encode($lista);
     }
 
     public static function delete()
